@@ -1,0 +1,263 @@
+@font-face {
+  font-family: squid_game;
+  src: url(fonts/LaoutBeautyPersonalUse-X3MjG.otf);
+}
+
+@font-face {
+  font-family: opensans-medium;
+  src: url(fonts/OpenSans-Bold.ttf);
+}
+
+@font-face {
+  font-family: sora-regular;
+  src: url(fonts/Sora-Regular.ttf);
+}
+@font-face {
+  font-family: biorhyme-bold;
+  src: url(fonts/ZTGrafton-Regular.ttf);
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+      rgba(170, 160, 151, 0.7),
+      rgba(70, 55, 45, 0.7)
+    ),
+    url(header.jpg);
+  background-position: center;
+  background-size: contain;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  position: relative;
+  margin-bottom: 200px;
+}
+
+.title-game {
+  display: flex;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.title-game h1 {
+  font-family: squid_game;
+  font-size: 120px;
+  letter-spacing: 8px;
+  color: #f7e36d;
+  pointer-events: none;
+  user-select: none;
+}
+
+.header form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-name {
+  border-radius: 5px;
+  padding: 13px 20px;
+  font-size: 19px;
+  border-color: white;
+  width: 300px;
+  font-family: opensans-medium;
+  color: #36200c;
+}
+.form-name:focus {
+  outline: none !important;
+  border: solid #ebb134;
+  box-shadow: 0 0 10px #ebb134;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  border: antiquewhite 1px solid;
+  box-shadow: 50px;
+  color: antiquewhite;
+  background-color: transparent;
+  padding: 10px 50px;
+  cursor: pointer;
+  transition: 1s;
+  border-radius: 7px;
+  font-family: opensans-medium;
+  font-weight: 200;
+  height: 42px;
+}
+
+.label-name {
+  outline: none !important;
+  position: absolute;
+  transform: translateY(60%);
+  left: 0;
+  margin-left: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: gray;
+  pointer-events: none;
+  user-select: none;
+  transition: 0.25s ease;
+  font-family: opensans-medium;
+}
+.form-name:not(:placeholder-shown) + .label-name,
+.form-name:focus + .label-name {
+  transform: translateY(-87%);
+  background-color: white;
+  padding: 2px 5px 0 5px;
+  font-size: 14px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border: 2px solid #ebb134;
+  border-bottom-width: 0;
+  color: #ebb134;
+  font-family: sora-regular;
+}
+
+.form-name:not(:focus) + .label-name {
+  border: 2px solid white;
+  color: gray;
+}
+
+.btn:hover {
+  background-color: #ebb134;
+  border: #ebb134;
+  color: aliceblue;
+  border-radius: 7px;
+}
+
+@media screen and (max-width: 640px) {
+  .title-game h1 {
+    font-size: 74px;
+  }
+  .form-name {
+    font-size: 16px;
+    width: 190px;
+  }
+  .label-name {
+    transform: translateY(50%);
+  }
+  .header button {
+    width: 90px;
+    height: 35px;
+  }
+}
+
+@media screen and (max-width: 435px) {
+  .title-game h1 {
+    font-size: 55px;
+  }
+  .form-name {
+    font-size: 14px;
+    width: 170px;
+  }
+  .label-name {
+    transform: translateY(45%);
+    margin-left: 15px;
+  }
+  .header button {
+    width: 90px;
+    height: 35px;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .title-game h1 {
+    font-size: 42px;
+  }
+  .form-name {
+    font-size: 12px;
+    padding: 10px 20px;
+    width: 150px;
+  }
+  .label-name {
+    transform: translateY(45%);
+    margin-left: 15px;
+    font-size: 13px;
+  }
+  .form-name:not(:placeholder-shown) + .label-name,
+  .form-name:focus + .label-name {
+    font-size: 12px;
+  }
+  .form-name:not(:focus) + .label-name {
+    border: 2px solid white;
+    color: gray;
+    font-size: 12px;
+  }
+  .header button {
+    width: 80px;
+    height: 30px;
+    padding: 10px 30px;
+  }
+}
+
+/*tictactoe JSP design*/
+.board {
+  background: rgb(242, 242, 242);
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 0 10px antiquewhite;
+  display: grid;
+  align-content: center;
+  grid-gap: 50px;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+}
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  outline: none;
+  box-shadow: 0 0 10px rgb(232, 218, 176);
+  background: linear-gradient(to right, rgb(52, 76, 183), rgb(0, 9, 87));
+  color: gray;
+}
+.cell-content {
+  color: rgb(254, 228, 64);
+  font-size: 40px;
+}
+.alert {
+  background-color: crimson;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+}
+.page {
+  display: flex;
+  witdth: 100%;
+  justify-content: center;
+  padding: 60px;
+  flex-direction: row;
+}
+.left {
+  flex-basis: 66%;
+}
+.right {
+  flex-basis: 33%;
+  margin-left: 43px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.win {
+  background-color: lightgreen;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+}
+.btn-move {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
