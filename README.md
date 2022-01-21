@@ -1,8 +1,6 @@
 # TicTacToe
 Hi there, here is a Tic Tac Toe game :smile:
 
-It was made by Ly Ngo (mostly backend part) and Hoang Dang Bao Thien (mostly frontend part)
-
 This is the version that player could beat computer :angel:
 
 For a version player neverrrrrr win, may be you could change the createRandomMove into this:
