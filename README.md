@@ -1,4 +1,5 @@
 # TicTacToe
+<a href="web/index.html"></a>
 Hi there, here is a Tic Tac Toe game :smile:
 
 This is the version that player could beat computer :angel:
